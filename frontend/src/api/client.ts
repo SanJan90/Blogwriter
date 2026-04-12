@@ -2,7 +2,7 @@ import axios from 'axios';
 import { BlogContent, Photo, GeneratedBlog } from '../types/blog';
 
 const api = axios.create({
-  baseURL: import.meta.env.VITE_API_URL ? import.meta.env.VITE_API_URL + '/api' : '/api',
+  baseURL: 'https://blogwriter-production-30d7.up.railway.app/api',
   timeout: 120000,
 });
 
