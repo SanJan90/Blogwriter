@@ -2,7 +2,7 @@ import axios from 'axios';
 import { BlogContent, Photo, GeneratedBlog } from '../types/blog';
 
 const api = axios.create({
-  baseURL: '/api',
+  baseURL: import.meta.env.VITE_API_URL ? import.meta.env.VITE_API_URL + '/api' : '/api',
   timeout: 120000,
 });
 
