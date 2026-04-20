@@ -4,6 +4,11 @@ import base64
 from pathlib import Path
 import anthropic
 
+# DEBUG - tijdelijk
+print(f"DEBUG: ANTHROPIC_API_KEY present: {bool(os.environ.get('ANTHROPIC_API_KEY'))}", flush=True)
+print(f"DEBUG: Key length: {len(os.environ.get('ANTHROPIC_API_KEY', ''))}", flush=True)
+# EINDE DEBUG
+
 client = anthropic.Anthropic(api_key=os.environ.get("ANTHROPIC_API_KEY"))
 
 BLOG_SYSTEM_PROMPT = """Je bent een professionele blog schrijver die blogs maakt voor websites.
